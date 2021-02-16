@@ -1,0 +1,45 @@
+def dodawanie(x, y):
+    return x + y
+
+
+def odejmowanie(x, y):
+    return x - y
+
+
+def mnozenie(x, y):
+    return x * y
+
+
+def dzielenie(x, y):
+    return x / y
+
+
+print("Wybierz dzialanie.")
+print("1.Dodawanie")
+print("2.Odejmowanie")
+print("3.Mnozenie")
+print("4.Dzielenie")
+
+while True:
+
+    choice = input("wybierz opcje od 1-4 ")
+
+
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Podaj pierwsza liczbe: "))
+        num2 = float(input("Podaj trzecia liczbe: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", dodawanie(num1, num2))
+
+        elif choice == '2':
+            print(num1, "-", num2, "=", odejmowanie(num1, num2))
+
+        elif choice == '3':
+            print(num1, "*", num2, "=", mnozenie(num1, num2))
+
+        elif choice == '4':
+            print(num1, "/", num2, "=", dzielenie(num1, num2))
+        break
+    else:
+        print("Zly numer dzialania")
